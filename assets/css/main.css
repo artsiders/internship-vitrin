@@ -1209,6 +1209,8 @@ input[type="button"]:focus {
   width: 52.5%;
   box-shadow: 5px 8px 30px 1px rgba(0, 0, 0, 0.21);
   z-index: 2;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .work__visual img {
   display: block;
@@ -1361,7 +1363,78 @@ input[type="button"]:focus {
   padding: 25px;
   background: #fff;
   box-shadow: 0 0 15px #d1d1d1cf;
+  overflow: hidden;
 }
+.contact__form-info{
+  display: flex;
+  padding: 10px;
+  margin: 0px auto 15px auto;
+  color: var(--white2);
+  font-weight: bold;
+  height: 25px;
+  width: 100%;
+  position: relative;
+}
+.contact__form-info--success{
+  background: #3cd117;
+   -webkit-animation: scrollDown2 1s; 
+   animation: scrollDown2 1s;
+}
+.contact__form-info--danger{
+  background: #ff0000;
+  -webkit-animation: scrollDown2 1s; 
+  animation: scrollDown2 1s;
+}
+
+.contact__form-info--remove{
+  -webkit-animation: scrollup2 1s; 
+  animation: scrollup2 1s;
+}
+
+@-webkit-keyframes scrollDown2 {
+  0% {
+    top: -85px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes scrollDown2 {
+  0% {
+    top: -85px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scrollup2 {
+  0% {
+    top: 0px;
+    opacity: 1;
+  }
+  100% {
+    top: -85px;
+    opacity: 0;
+  }
+}
+
+@keyframes scrollup2 {
+  0% {
+    top: 0px;
+    opacity: 1;
+  }
+  100% {
+    top: -85px;
+    opacity: 0;
+  }
+}
+
 .contact__form-el {
   padding: 0 0 0 15px;
   font-size: 16px;
@@ -1414,8 +1487,7 @@ input[type="button"]:focus {
   .contact__form {
     width: 600px;
     max-width: 75%;
-    margin-bottom: 45px;
-    padding: 0 15px;
+    padding: 25px;
   }
 }
 @media (max-width: 767px) {
@@ -1442,7 +1514,7 @@ input[type="button"]:focus {
   }
   .contact__form {
     max-width: 100%;
-    padding: 0;
+    padding: 10px;
   }
   .contact__form-el--name,
   .contact__form-el--email {

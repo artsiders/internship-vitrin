@@ -1,4 +1,5 @@
 const contactForm = document.getElementById('contact-form')
+const contactFormInfo = document.querySelector('.contact__form-info')
 
 // console.log(contactForm)
 
@@ -18,11 +19,22 @@ contactForm.addEventListener('submit', function (e) {
       message: message,
     })
       .then(() => {
-        alert('email envoyer !')
+        contactFormInfo.classList.add('contact__form-info--success')
+        contactFormInfo.innerHTML = 'email envoyer !'
       }, (err) => {
-        alert('un Probleme est survenue recomencer !')
+        contactFormInfo.classList.add('contact__form-info--danger')
+        contactFormInfo.innerHTML = 'un Probleme est survenue recomencer !'
       })
   } catch (error) {
-    alert('Connexion a l\'api impossible !')
+    contactFormInfo.classList.add('contact__form-info--danger')
+    contactFormInfo.innerHTML = 'Connexion a l\'api impossible !'
+    setTimeout(() => {
+      contactFormInfo.classList.add('contact__form-info--remove')
+    }, 4000)
+    setTimeout(() => {
+      contactFormInfo.classList.remove('contact__form-info--success')
+      contactFormInfo.classList.remove('contact__form-info--danger')
+      contactFormInfo.classList.remove('contact__form-info--remove')
+    }, 5000)
   }
 })
