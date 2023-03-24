@@ -26,7 +26,7 @@ contactForm.addEventListener('submit', function (e) {
         contactFormInfo.innerHTML = 'un Probleme est survenue recomencer !'
       })
   } catch (error) {
-    contactFormInfo.classList.add('contact__form-info--success')
+    contactFormInfo.classList.add('contact__form-info--danger')
     contactFormInfo.innerHTML = 'Connexion a l\'api impossible !'
     setTimeout(() => {
       contactFormInfo.classList.add('contact__form-info--remove')
