@@ -1376,12 +1376,12 @@ input[type="button"]:focus {
   position: relative;
 }
 .contact__form-info--success{
-  background: #3cd117;
+  background: #57df8d;
    -webkit-animation: scrollDown2 1s; 
    animation: scrollDown2 1s;
 }
 .contact__form-info--danger{
-  background: #ff0000;
+  background: #fb5151;
   -webkit-animation: scrollDown2 1s; 
   animation: scrollDown2 1s;
 }

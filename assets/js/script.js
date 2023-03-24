@@ -54,3 +54,13 @@ workNavigationEls.forEach((workNavigationEl, key) => {
 		})
 	})
 })
+
+/*****************  ******************/
+
+// const workVisuals = document.querySelectorAll('.work__visual')
+
+// workVisuals.forEach((workVisual) => {
+// 	workVisual.addEventListener('mousemove', () => {
+// 		console.log(window.scroll)
+// 	})
+// })
