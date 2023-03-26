@@ -1,5 +1,6 @@
 const contactForm = document.getElementById('contact-form')
 const contactFormInfo = document.querySelector('.contact__form-info')
+const btnSubmit = document.querySelector('.btn_submit')
 
 // console.log(contactForm)
 
@@ -11,6 +12,8 @@ contactForm.addEventListener('submit', function (e) {
   const message = document.getElementById('message').value
 
   e.preventDefault()
+
+  btnSubmit.value = 'Chargement ...'
 
   try {
     emailjs.send("service_snqenkg", "template_29fkhbj", {
@@ -28,14 +31,15 @@ contactForm.addEventListener('submit', function (e) {
   } catch (error) {
     contactFormInfo.classList.add('contact__form-info--danger')
     contactFormInfo.innerHTML = 'Connexion a l\'api impossible !'
+    btnSubmit.value = 'Envoyer'
     setTimeout(() => {
       contactFormInfo.classList.add('contact__form-info--remove')
-    }, 4000)
-    setTimeout(() => {
-      contactFormInfo.classList.remove('contact__form-info--success')
-      contactFormInfo.classList.remove('contact__form-info--danger')
-      contactFormInfo.classList.remove('contact__form-info--remove')
+      setTimeout(() => {
+        contactFormInfo.classList.remove('contact__form-info--success')
+        contactFormInfo.classList.remove('contact__form-info--danger')
+        contactFormInfo.classList.remove('contact__form-info--remove')
         contactFormInfo.innerHTML = ''
-    }, 5000)
+      }, 1000)
+    }, 3000)
   }
 })

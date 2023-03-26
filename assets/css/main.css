@@ -806,14 +806,6 @@ input[type="button"]:focus {
   align-items: center;
   gap: 45px;
 }
-/*.introduction::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, var(--primary), var(--secondary));
-  opacity: 0.2;
-}*/
 .introduction__content {
   color: #9e9e9e;
   font-size: 30px;
@@ -1377,13 +1369,13 @@ input[type="button"]:focus {
 }
 .contact__form-info--success{
   background: #57df8d;
-   -webkit-animation: scrollDown2 1s; 
-   animation: scrollDown2 1s;
+   -webkit-animation: scrollDown2 0.4s; 
+   animation: scrollDown2 0.4s;
 }
 .contact__form-info--danger{
   background: #fb5151;
-  -webkit-animation: scrollDown2 1s; 
-  animation: scrollDown2 1s;
+  -webkit-animation: scrollDown2 0.4s; 
+  animation: scrollDown2 0.4s;
 }
 
 .contact__form-info--remove{
