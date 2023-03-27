@@ -24,9 +24,11 @@ contactForm.addEventListener('submit', function (e) {
       .then(() => {
         contactFormInfo.classList.add('contact__form-info--success')
         contactFormInfo.innerHTML = 'email envoyer !'
+        btnSubmit.value = 'Envoyer'
       }, (err) => {
         contactFormInfo.classList.add('contact__form-info--danger')
         contactFormInfo.innerHTML = 'un Probleme est survenue recomencer !'
+        btnSubmit.value = 'Envoyer'
       })
   } catch (error) {
     contactFormInfo.classList.add('contact__form-info--danger')
