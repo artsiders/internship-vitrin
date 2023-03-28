@@ -15,6 +15,12 @@ contactForm.addEventListener('submit', function (e) {
 
   btnSubmit.value = 'Chargement ...'
 
+  const addComportement = (class, message) => {
+    contactFormInfo.classList.add(class)
+    contactFormInfo.innerHTML = message
+    btnSubmit.value = 'Envoyer'
+  }
+
   try {
     emailjs.send("service_snqenkg", "template_29fkhbj", {
       name: name,
@@ -22,18 +28,12 @@ contactForm.addEventListener('submit', function (e) {
       message: message,
     })
       .then(() => {
-        contactFormInfo.classList.add('contact__form-info--success')
-        contactFormInfo.innerHTML = 'email envoyer !'
-        btnSubmit.value = 'Envoyer'
+        addComportement('contact__form-info--success', 'email envoyer !')
       }, (err) => {
-        contactFormInfo.classList.add('contact__form-info--danger')
-        contactFormInfo.innerHTML = 'un Probleme est survenue recomencer !'
-        btnSubmit.value = 'Envoyer'
+        addComportement('contact__form-info--success', 'email envoyer !')
       })
   } catch (error) {
-    contactFormInfo.classList.add('contact__form-info--danger')
-    contactFormInfo.innerHTML = 'Connexion a l\'api impossible !'
-    btnSubmit.value = 'Envoyer'
+      addComportement('contact__form-info--success', 'email envoyer !')
     setTimeout(() => {
       contactFormInfo.classList.add('contact__form-info--remove')
       setTimeout(() => {
