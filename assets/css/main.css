@@ -798,7 +798,7 @@ input[type="button"]:focus {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  background: url("../img/Students.jpg");
+  background: url("../img/Students.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1011,7 +1011,7 @@ input[type="button"]:focus {
   width: 1036px;
   height: 659px;
   margin: 0;
-  background-image: url("../img/app-design-visual.png");
+  background-image: url("../img/app-design-visual.webp");
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -1085,7 +1085,7 @@ input[type="button"]:focus {
   width: 828px;
   height: 581px;
   margin: 0;
-  background-image: url("../img/web-design-visual.png");
+  background-image: url("../img/web-design-visual.webp");
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -1357,7 +1357,7 @@ input[type="button"]:focus {
   box-shadow: 0 0 15px #d1d1d1cf;
   overflow: hidden;
 }
-.contact__form-info{
+.contact__form-info {
   display: flex;
   padding: 10px;
   margin: 0px auto 15px auto;
@@ -1367,19 +1367,19 @@ input[type="button"]:focus {
   width: 100%;
   position: relative;
 }
-.contact__form-info--success{
+.contact__form-info--success {
   background: #57df8d;
-   -webkit-animation: scrollDown2 0.4s; 
-   animation: scrollDown2 0.4s;
+  -webkit-animation: scrollDown2 0.4s;
+  animation: scrollDown2 0.4s;
 }
-.contact__form-info--danger{
+.contact__form-info--danger {
   background: #fb5151;
-  -webkit-animation: scrollDown2 0.4s; 
+  -webkit-animation: scrollDown2 0.4s;
   animation: scrollDown2 0.4s;
 }
 
-.contact__form-info--remove{
-  -webkit-animation: scrollup2 1s; 
+.contact__form-info--remove {
+  -webkit-animation: scrollup2 1s;
   animation: scrollup2 1s;
 }
 
